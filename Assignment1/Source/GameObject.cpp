@@ -1,14 +1,26 @@
 #include "GameObject.h"
 
+GameObject::GameObject()
+{
 
-// Getting the name of  the object
+}
+
+GameObject::GameObject(const string& kName)
+{
+
+}
+
+GameObject::~GameObject()
+{
+
+}
+
 string GameObject::getName()
 {
-	return string();
+	return kName;
 }
 
 
-// Counting the number of objects of this type instantiated
 int GameObject::getCount()
 {
 	return 0;

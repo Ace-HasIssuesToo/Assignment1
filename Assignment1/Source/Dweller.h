@@ -1,19 +1,20 @@
-#pragma once
+#ifndef DWELLER_H
+#define DWELLER_H
 
 #include "Vec2D.h"
 #include "Weapon.h"
 #include "Outfit.h"
-#include "GameObject.h"
 
 #include <string>
 
 using std::string;
 
-class Dweller :public	Weapon, Outfit, GameObject, Vec2D
+class Dweller :public Weapon, Outfit
 {
 public:
+	Dweller();
 	Dweller(const string&, const int&);
-	virtual ~Dweller();
+	~Dweller();
 
 	const int getSPECIAL;
 	const int getCurrentHealth;
@@ -22,9 +23,9 @@ public:
 	void setPosition(const Vec2D&);
 	const Vec2D getPosition();
 
-	void recieveHealthDamage(const int&);
-	void recieveRadDamage(const int&);
-	void recieveEquipmentDamage(const int&);
+	void receiveHealthDamage(const int&);
+	void receiveRadDamage(const int&);
+	void receiveEquipmentDamage(const int&);
 
 	void addStimpak(const int);
 	void addRadaway(const int);
@@ -48,3 +49,4 @@ private:
 	Weapon* weapon_;	//What weapon is the weapon equiping
 };
 
+#endif

@@ -1,7 +1,10 @@
 #include "Item.h"
 
-
 Item::Item()
+{
+}
+
+Item::Item(const string kName, const int& durability_)
 {
 }
 
