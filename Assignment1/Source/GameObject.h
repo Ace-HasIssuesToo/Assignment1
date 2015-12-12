@@ -1,6 +1,7 @@
 #ifndef GameObject_H
 #define GameObject_H
 
+#include <iostream>
 #include <string>
 
 using std::string;
@@ -11,13 +12,13 @@ public:
 	GameObject();
 	~GameObject();
 	string getName();
-	int getCount();
+	static int getCount();
 protected:
 	GameObject(const string&);
 
 private:
 	const string kName;
-	int count_;
+	static int count_;
 
 };
 

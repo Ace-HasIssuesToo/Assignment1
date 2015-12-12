@@ -9,7 +9,7 @@
 
 using std::string;
 
-class Dweller :public Weapon, Outfit
+class Dweller :public Weapon,public Outfit
 {
 public:
 	Dweller();
@@ -27,11 +27,11 @@ public:
 	void receiveRadDamage(const int&);
 	void receiveEquipmentDamage(const int&);
 
-	void addStimpak(const int);
-	void addRadaway(const int);
+	void addStimpak(const int&);
+	void addRadAway(const int&);
 
-	void useStimpak(const int);
-	void useRadaway(const int);
+	void useStimpak();
+	void useRadAway();
 
 	Outfit* assignOutfit(Outfit*);
 	Weapon* assignWeapon(Weapon*);

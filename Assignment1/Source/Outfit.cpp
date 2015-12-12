@@ -90,4 +90,5 @@ const int Outfit::getSPECIAL()
 	{
 		L = 0;
 	}
+	return kSPECIAL;
 }
