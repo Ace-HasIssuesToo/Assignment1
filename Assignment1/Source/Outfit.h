@@ -12,6 +12,5 @@ public:
 	const int getSPECIAL();
 private:
 	const int kSPECIAL;
-
 };
 #endif

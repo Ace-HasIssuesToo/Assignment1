@@ -16,10 +16,10 @@ public:
 	Dweller(const string&, const int&);
 	~Dweller();
 
-	const int getSPECIAL;
-	const int getCurrentHealth;
-	const int getCurrentRadDamage;
-	const int getAttackDmg;
+	const int getSPECIAL();
+	const int getCurrentHealth();
+	const int getCurrentRadDamage();
+	const int getAttackDmg();
 	void setPosition(const Vec2D&);
 	const Vec2D getPosition();
 
