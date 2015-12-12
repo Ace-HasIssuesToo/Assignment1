@@ -1,10 +1,7 @@
 #include "Dweller.h"
 
-Dweller::Dweller()
-{
-}
-
-Dweller::Dweller(const string& kName, const int& SPECIAL)
+Dweller::Dweller(const string& kName, const int& SPECIAL_)
+	:GameObject(kName), SPECIAL_(SPECIAL_),
 { 
 }															 
 

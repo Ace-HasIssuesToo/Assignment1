@@ -9,10 +9,9 @@
 
 using std::string;
 
-class Dweller :public Weapon,public Outfit
+class Dweller :public GameObject
 {
 public:
-	Dweller();
 	Dweller(const string&, const int&);
 	~Dweller();
 

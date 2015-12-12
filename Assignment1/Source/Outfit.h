@@ -6,8 +6,7 @@
 class Outfit: public Item
 {
 public:
-	Outfit();
-	Outfit(const string&, const int&, const int&);
+	Outfit(const string& kName, const int& durability_, const int& kSPECIAL);
 	~Outfit();
 	const int getSPECIAL();
 private:

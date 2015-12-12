@@ -9,12 +9,11 @@ using std::string;
 class GameObject
 {
 public:
-	GameObject();
 	~GameObject();
 	string getName();
 	static int getCount();
 protected:
-	GameObject(const string&);
+	GameObject(const string&  name);
 
 private:
 	const string kName;

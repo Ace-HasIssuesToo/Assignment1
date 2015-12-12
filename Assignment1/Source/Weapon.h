@@ -6,7 +6,6 @@
 class Weapon : public Item
 {
 public:
-	Weapon();
 	Weapon(const string&, const int&, const int&);
 	~Weapon();
 	const int getAttackDmg();

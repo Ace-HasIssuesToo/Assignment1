@@ -1,13 +1,7 @@
 #include "Outfit.h"
 
-Outfit::Outfit()
-	:kSPECIAL(kSPECIAL)
-{
-
-}
-
 Outfit::Outfit(const string& kName, const int& durability_, const int& kSPECIAL)
-	:kSPECIAL(kSPECIAL)
+	:GameObject(kName), durability_(durability_) ,kSPECIAL(kSPECIAL)
 {
 
 }
