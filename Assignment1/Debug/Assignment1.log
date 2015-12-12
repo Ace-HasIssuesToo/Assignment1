@@ -1,30 +1,50 @@
-﻿Build started 12/12/2015 11:49:39 PM.
+﻿Build started 13/12/2015 1:12:31 AM.
      1>Project "F:\Data\Assignment01_150513M_TristanChia\Assignment1\Assignment1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Dweller.cpp Source\compileCheck.cpp Source\main.cpp
+         main.cpp
+     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\main.cpp(20): error C2259: 'Dweller' : cannot instantiate abstract class
+                 due to following members:
+                 'void Item::receivedDamage(const int &)' : is abstract
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
+                 'void Item::receivedDamage(const int &)' : is abstract
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
+     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\main.cpp(21): error C2259: 'Outfit' : cannot instantiate abstract class
+                 due to following members:
+                 'void Item::receivedDamage(const int &)' : is abstract
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
+         compileCheck.cpp
+     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(13): error C2259: 'Dweller' : cannot instantiate abstract class
+                 due to following members:
+                 'void Item::receivedDamage(const int &)' : is abstract
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
+                 'void Item::receivedDamage(const int &)' : is abstract
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
+     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(14): error C2259: 'Outfit' : cannot instantiate abstract class
+                 due to following members:
+                 'void Item::receivedDamage(const int &)' : is abstract
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
+     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(15): error C2259: 'Weapon' : cannot instantiate abstract class
+                 due to following members:
+                 'void Item::receivedDamage(const int &)' : is abstract
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
+     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(20): error C2594: 'argument' : ambiguous conversions from 'Dweller *' to 'GameObject *const '
+     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(44): error C2039: 'receiveDamage' : is not a member of 'Outfit'
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\outfit.h(6) : see declaration of 'Outfit'
+     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(48): error C2039: 'receiveDamage' : is not a member of 'Weapon'
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\weapon.h(6) : see declaration of 'Weapon'
+     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(53): error C2039: 'receiveDamage' : is not a member of 'Item'
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(6) : see declaration of 'Item'
+     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(57): error C2039: 'receiveDamage' : is not a member of 'Item'
+                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(6) : see declaration of 'Item'
          Dweller.cpp
      1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(146): error C2385: ambiguous access of 'durability_'
                  could be the 'durability_' in base 'Item'
                  or could be the 'durability_' in base 'Item'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(150): error C2511: 'void Dweller::addStimpak(const int &)' : overloaded member function not found in 'Dweller'
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.h(12) : see declaration of 'Dweller'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(151): error C2671: 'Dweller::addStimpak' : static member functions do not have 'this' pointers
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(151): error C2227: left of '->stimpak_' must point to class/struct/union/generic type
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(152): error C2671: 'Dweller::addStimpak' : static member functions do not have 'this' pointers
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(152): error C2227: left of '->stimpak_' must point to class/struct/union/generic type
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(156): error C2511: 'void Dweller::addRadaway(const int &)' : overloaded member function not found in 'Dweller'
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.h(12) : see declaration of 'Dweller'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(157): error C2671: 'Dweller::addRadaway' : static member functions do not have 'this' pointers
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(157): error C2227: left of '->radaway_' must point to class/struct/union/generic type
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(158): error C2671: 'Dweller::addRadaway' : static member functions do not have 'this' pointers
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(158): error C2227: left of '->radaway_' must point to class/struct/union/generic type
      1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(193): error C3867: 'Dweller::isDead': function call missing argument list; use '&Dweller::isDead' to create a pointer to member
          Generating Code...
-         Skipping... (no relevant changes detected)
-         main.cpp
-         compileCheck.cpp
      1>Done Building Project "F:\Data\Assignment01_150513M_TristanChia\Assignment1\Assignment1.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:01.72
+Time Elapsed 00:00:04.26
