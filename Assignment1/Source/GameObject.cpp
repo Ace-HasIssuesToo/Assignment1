@@ -1,7 +1,7 @@
 #include "GameObject.h"
 
-GameObject::GameObject(const std::string& name)
-	:kName(name)
+GameObject::GameObject(const string& kName)
+	:kName(kName)
 {
 	count_++;
 }
@@ -22,3 +22,5 @@ int GameObject::getCount()
 {
 	return count_;
 }
+
+int GameObject::count_;

@@ -1,13 +1,19 @@
 #include "Weapon.h"
 
 Weapon::Weapon(const string& kName, const int& durability_, const int& kAttackDmg)
-	:GameObject(kName), kAttackDmg(kAttackDmg), durability_(durability_), 
+	:Item(kName, durability_), kAttackDmg(kAttackDmg)
 {
 
 }
 
 Weapon::~Weapon()
 {
+
+}
+
+void Weapon::receiveDamage(const int&  durability_)
+{
+	this->durability_ = durability_;
 
 }
 

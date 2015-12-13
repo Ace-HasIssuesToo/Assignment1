@@ -7,8 +7,9 @@ class Outfit: public Item
 {
 public:
 	Outfit(const string& kName, const int& durability_, const int& kSPECIAL);
-	~Outfit();
+	virtual ~Outfit();
 	const int getSPECIAL();
+	virtual void receiveDamage(const int&);
 private:
 	const int kSPECIAL;
 };

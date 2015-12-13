@@ -1,50 +1,30 @@
-﻿Build started 13/12/2015 1:12:31 AM.
+﻿Build started 13/12/2015 7:25:35 PM.
      1>Project "F:\Data\Assignment01_150513M_TristanChia\Assignment1\Assignment1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Dweller.cpp Source\compileCheck.cpp Source\main.cpp
-         main.cpp
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\main.cpp(20): error C2259: 'Dweller' : cannot instantiate abstract class
-                 due to following members:
-                 'void Item::receivedDamage(const int &)' : is abstract
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
-                 'void Item::receivedDamage(const int &)' : is abstract
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\main.cpp(21): error C2259: 'Outfit' : cannot instantiate abstract class
-                 due to following members:
-                 'void Item::receivedDamage(const int &)' : is abstract
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
-         compileCheck.cpp
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(13): error C2259: 'Dweller' : cannot instantiate abstract class
-                 due to following members:
-                 'void Item::receivedDamage(const int &)' : is abstract
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
-                 'void Item::receivedDamage(const int &)' : is abstract
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(14): error C2259: 'Outfit' : cannot instantiate abstract class
-                 due to following members:
-                 'void Item::receivedDamage(const int &)' : is abstract
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(15): error C2259: 'Weapon' : cannot instantiate abstract class
-                 due to following members:
-                 'void Item::receivedDamage(const int &)' : is abstract
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(12) : see declaration of 'Item::receivedDamage'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(20): error C2594: 'argument' : ambiguous conversions from 'Dweller *' to 'GameObject *const '
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(44): error C2039: 'receiveDamage' : is not a member of 'Outfit'
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\outfit.h(6) : see declaration of 'Outfit'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(48): error C2039: 'receiveDamage' : is not a member of 'Weapon'
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\weapon.h(6) : see declaration of 'Weapon'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(53): error C2039: 'receiveDamage' : is not a member of 'Item'
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(6) : see declaration of 'Item'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\compilecheck.cpp(57): error C2039: 'receiveDamage' : is not a member of 'Item'
-                 f:\data\assignment01_150513m_tristanchia\assignment1\source\item.h(6) : see declaration of 'Item'
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Dweller.cpp Source\GameObject.cpp Source\Item.cpp Source\Outfit.cpp Source\Vec2D.cpp Source\Weapon.cpp Source\compileCheck.cpp Source\main.cpp
          Dweller.cpp
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(146): error C2385: ambiguous access of 'durability_'
-                 could be the 'durability_' in base 'Item'
-                 or could be the 'durability_' in base 'Item'
-     1>f:\data\assignment01_150513m_tristanchia\assignment1\source\dweller.cpp(193): error C3867: 'Dweller::isDead': function call missing argument list; use '&Dweller::isDead' to create a pointer to member
          Generating Code...
-     1>Done Building Project "F:\Data\Assignment01_150513M_TristanChia\Assignment1\Assignment1.vcxproj" (Build target(s)) -- FAILED.
+         Compiling...
+         main.cpp
+         compileCheck.cpp
+         Weapon.cpp
+         Vec2D.cpp
+         Outfit.cpp
+         Item.cpp
+         GameObject.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Data\Assignment01_150513M_TristanChia\Debug\Assignment1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Data\Assignment01_150513M_TristanChia\Debug\Assignment1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Data\Assignment01_150513M_TristanChia\Debug\Assignment1.lib" /MACHINE:X86 Debug\compileCheck.obj
+         Debug\Dweller.obj
+         Debug\GameObject.obj
+         Debug\Item.obj
+         Debug\main.obj
+         Debug\Outfit.obj
+         Debug\Vec2D.obj
+         Debug\Weapon.obj
+         Assignment1.vcxproj -> F:\Data\Assignment01_150513M_TristanChia\Debug\Assignment1.exe
+     1>Done Building Project "F:\Data\Assignment01_150513M_TristanChia\Assignment1\Assignment1.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:04.26
+Time Elapsed 00:00:13.04

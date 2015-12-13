@@ -1,87 +1,131 @@
 #include "Dweller.h"
 
 Dweller::Dweller(const string& kName, const int& SPECIAL_)
-	:GameObject(kName), SPECIAL_(SPECIAL_),
-{ 
-}															 
+	:GameObject(kName), SPECIAL_(SPECIAL_), position_(0, 0), health_(100), radiation_(0), stimpak_(0), radaway_(0), outfit_(NULL), weapon_(NULL)
+{ 										 
+}											
 
-
-Dweller::~Dweller()
-{
-}
+Dweller::~Dweller()						 
+{										
+}										 
 
 const int Dweller::getSPECIAL()
 {
-	int S = 0, P = 0, E = 0, C = 0, I = 0, A = 0, L = 0;
-
-	if (S > 9)
+	if (outfit_ != 0) //If an outfit exists
 	{
-		S = 9;
+		outfit_->getSPECIAL();
+
+		//Initialise Combined SPECIAL
+		int  S, P, E, C, I, A, L;
+
+		//Dweller's SPECIAL
+		int DwellerS = (SPECIAL_ / 1000000);
+		int DwellerP = (SPECIAL_ / 100000) - (DwellerS * 10);
+		int DwellerE = (SPECIAL_ / 10000) - (DwellerS * 100) - (DwellerP * 10);
+		int DwellerC = (SPECIAL_ / 1000) - (DwellerS * 1000) - (DwellerP * 100) - (DwellerE * 10);
+		int DwellerI = (SPECIAL_ / 100) - (DwellerS * 10000) - (DwellerP * 1000) - (DwellerE * 100) - (DwellerC * 10);
+		int DwellerA = (SPECIAL_)-(DwellerS * 100000) - (DwellerP * 10000) - (DwellerE * 1000) - (DwellerC * 100) - (DwellerI * 10);
+		int DwellerL = (SPECIAL_)-(DwellerS * 100000) - (DwellerP * 100000) - (DwellerE * 10000) - (DwellerC * 1000) - (DwellerI * 100) - (DwellerA * 10);
+
+		//Outfit SPECIAL
+
+		int OutfitS = (outfit_->getSPECIAL() / 1000000);
+		int OutfitP = (outfit_->getSPECIAL() / 100000) - (OutfitS * 10);
+		int OutfitE = (outfit_->getSPECIAL() / 10000) - (OutfitS * 100) - (OutfitP * 10);
+		int OutfitC = (outfit_->getSPECIAL() / 1000) - (OutfitS * 1000) - (OutfitP * 100) - (OutfitE * 10);
+		int OutfitI = (outfit_->getSPECIAL() / 100) - (OutfitS * 10000) - (OutfitP * 1000) - (OutfitE * 100) - (OutfitC * 10);
+		int OutfitA = (outfit_->getSPECIAL()) - (OutfitS * 100000) - (OutfitP * 10000) - (OutfitE * 1000) - (OutfitC * 100) - (OutfitI * 10);
+		int OutfitL = (outfit_->getSPECIAL()) - (OutfitS * 100000) - (OutfitP * 100000) - (OutfitE * 10000) - (OutfitC * 1000) - (OutfitI * 100) - (OutfitA * 10);
+
+		//Dweller SPECIAL _ Outfit Special (AKA kSPECIAL)
+
+		S = DwellerS + OutfitS;
+		P = DwellerP + OutfitP;
+		E = DwellerE + OutfitE;
+		C = DwellerC + OutfitC;
+		I = DwellerI + OutfitI;
+		A = DwellerA + OutfitA;
+		L = DwellerL + OutfitL;
+
+		//Loops for SPECIAL if they exceed 9 or fall below 0;
+		//Strength
+		if (S > 9)
+		{
+			S = 9;
+		}
+
+		if (S < 0)
+		{
+			S = 0;
+		}
+		//Perception
+		if (P > 9)
+		{
+			P = 9;
+		}
+
+		if (P < 0)
+		{
+			P = 0;
+		}
+		//Endurance
+		if (E > 9)
+		{
+			E = 9;
+		}
+
+		if (E < 0)
+		{
+			E = 0;
+		}
+		//Charisma
+		if (C > 9)
+		{
+			C = 9;
+		}
+
+		if (C < 0)
+		{
+			C = 0;
+		}
+		//Intelligence
+		if (I > 9)
+		{
+			I = 9;
+		}
+
+		if (I < 0)
+		{
+			I = 0;
+		}
+		//Agility
+		if (A > 9)
+		{
+			A = 9;
+		}
+
+		if (A < 0)
+		{
+			A = 0;
+		}
+		//Luck
+		if (L > 9)
+		{
+			L = 9;
+		}
+
+		if (L < 0)
+		{
+			L = 0;
+		}
+		//Putting it back into one entire integer
+		SPECIAL_ = (S * 1000000) + (P * 100000) + (E * 10000) + (C * 1000) + (I * 100) + (A * 10) + (L * 1);
+		return SPECIAL_;
 	}
 
-	if (P > 9)
+	if (outfit_ == 0) // If an outfit does not exist, simply return Dweller's SPECIAL values
 	{
-		P = 9;
-	}
-
-	if (E > 9)
-	{
-		E = 9;
-	}
-
-	if (C > 9)
-	{
-		C = 9;
-	}
-
-	if (I > 9)
-	{
-		I = 9;
-	}
-
-	if (A > 9)
-	{
-		A = 9;
-	}
-
-	if (L > 9)
-	{
-		L = 9;
-	}
-
-	if (S < 0)
-	{
-		S = 0;
-	}
-
-	if (P < 0)
-	{
-		P = 0;
-	}
-
-	if (E < 0)
-	{
-		E = 0;
-	}
-
-	if (C < 0)
-	{
-		C = 0;
-	}
-
-	if (I < 0)
-	{
-		I = 0;
-	}
-
-	if (A < 0)
-	{
-		A = 0;
-	}
-
-	if (L < 0)
-	{
-		L = 0;
+		return SPECIAL_;
 	}
 	return SPECIAL_;
 }
@@ -92,7 +136,7 @@ const int Dweller::getCurrentHealth()
 }
 const int Dweller::getCurrentRadDamage()
 {
-	return health_;
+	return radiation_;
 }
 
 const int Dweller::getAttackDmg()
@@ -113,8 +157,6 @@ const Vec2D  Dweller::getPosition()
 
 void Dweller::receiveHealthDamage(const int& health_)
 {
-	this->health_ = 100;
-
 	if (health_ > 100 - radiation_)
 	{
 		this->health_ = (100 - radiation_);
@@ -124,8 +166,6 @@ void Dweller::receiveHealthDamage(const int& health_)
 
 void Dweller::receiveRadDamage(const int& radiation_)
 {
-
-	this->radiation_ = 0;
 	if (radiation_ > 100)
 	{
 		this->radiation_ = 100;
@@ -140,18 +180,16 @@ void Dweller::receiveRadDamage(const int& radiation_)
 
 void Dweller::receiveEquipmentDamage(const int& durability_)
 {
-	this->durability_ = durability_;
+	
 }
 
 void Dweller::addStimpak(const int& stimpak_)
 {
-	this->stimpak_ = 0;
 	this->stimpak_ = stimpak_;
 }
 
 void Dweller::addRadAway(const int& radaway_)
 {
-	this->radaway_ = 0;
 	this->radaway_ = radaway_;
 }
 
@@ -167,25 +205,27 @@ void Dweller::useRadAway()
 	this->health_ -= 10;
 }
 
-Dweller::Outfit* assignOutfit(Outfit* outfit_)
+Outfit* Dweller::assignOutfit(Outfit* outfit_)
 {
-	return 0;
+	return outfit_;
 }
-Dweller::Weapon* assignWeapon(Weapon* weapon_)
+Weapon* Dweller::assignWeapon(Weapon* weapon_)
 {
-	return 0;
+	return weapon_;
 }
 
 bool Dweller::isDead()
 {
+	bool isDead;
+
 	if (health_ >= 1)
 	{
-		bool isDead = false;
+		isDead = false;
 	}
 
 	if (health_ < 1)
 	{
-		bool isDead = true;
+		isDead = true;
 	}
 	return isDead;
 }
